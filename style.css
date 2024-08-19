@@ -1,0 +1,172 @@
+@font-face {
+    font-family: 'kumar';
+    src: url('src/fonts/kumaroneoutline-regular-webfont.woff'),
+         url('src/fonts/kumaroneoutline-regular-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.container{
+    display: grid;
+    grid-template: auto 1fr auto/ repeat(3, 1fr);
+    min-height: 100vh;
+    background-color: rgb(127, 161, 195, 0.5);
+}
+
+header{
+    grid-column: 1 / 4;
+}
+
+main{
+    grid-column: 1 / 4;
+    grid-row: 2/ 3;
+}
+
+.head{
+    background-color: #1d2d44;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addBook{
+    background-color: #7FA1C3;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: bolder;
+    margin-right: 10px;
+}
+
+.addBook:hover{
+    background-color: #4F6D7F;
+}
+
+
+footer{
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+    background-color: #1b263b;
+    color: #e0e1dd;
+    height: 56px;
+    text-align: center;
+    display: grid;
+    place-content: center;
+}
+
+h1{
+    text-align: center;
+    font-family: 'kumar';
+    color: rgb(224, 225, 221, 0.7);
+    margin-left: 10px;
+}
+
+li{
+    list-style: none;
+    display: flex;
+}
+
+.bookList{
+    display: grid;
+    grid-template: 1fr 1fr / repeat(auto-fill, 1fr 1fr);
+    
+}
+
+
+ dialog{
+    width: 240px;
+    padding: 30px 20px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    background-color: #fff;
+    position: relative;
+    margin: 100px auto;
+
+}
+
+
+
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.5); 
+
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    grid-area: 1/ 2/ 2/ 3;
+    font-size: 1.2rem;
+}
+
+.myDialog input{
+    width: 190px;
+    border: none;
+    outline: 2px solid #7FA1C3;
+    border-radius: 7px;
+    height: 22px;
+}
+
+input:focus{
+    outline: 2px solid rgb(80, 213, 80);
+}
+
+.myDialog input[type="checkbox"]{
+    outline: none;
+}
+
+.btnOne, .submit{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 5px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #7FA1C3;
+    color: aliceblue;
+} 
+
+.delete{
+    background-color: #7FA1C3;
+    padding: 5px;
+    border: none;
+    border-radius: 6px;
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: 720;
+    width: 120px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.btnOne:hover, .submit:hover, .delete:hover{
+    background-color: #4F6D7F;
+}
+
+
+.book{
+    background-color: #e0e1dd;
+    width: 350px;
+    height: 200px;
+    padding: 20px;
+    margin: 20px auto; 
+    display: grid;
+    grid-column: 1 /2;
+    border-radius: 10px;
+    box-shadow: 0.25px 0px 10px rgba(0, 0, 0, 0.6);
+}

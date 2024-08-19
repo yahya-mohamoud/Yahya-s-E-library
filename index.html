@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts/kumaroneoutline-regular-webfont.woff">
+    <link rel="stylesheet" href="fonts/kumaroneoutline-regular-webfont.woff2">
+    <title>Yahya's Bookshelf</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="head">
+                    <!-- <img src="img/logo.png" alt=""> -->
+                    <h1>Yahya's Bookshelf</h1>
+                    <div class="addBtn">
+                        <button class="addBook">Add Book</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            
+            <dialog class="myDialog" >
+                    <div class="wrapper">
+                    <label for="title">Title:</label>
+                    <input type="text"  id="title" required>
+                    <label for="author">Author:</label>
+                    <input type="text" name="" id="author" required>
+                    <label for="page">Pages:</label>
+                    <input type="number" id="pages" required>
+                    <li>
+                        <label  class="lab" for="status">Read</label>
+                        <input type="checkbox" name="" id="status">
+                    </li>
+                    <button  class="btnOne" autofocus>close</button>
+                    <button type="submit" class="submit" >confirm</button>
+                    
+                </div>
+                </dialog>
+   
+                    <div class="bookList">
+                    </div>
+                
+
+       
+        </main>
+        <footer>
+           
+            <p>All Rights Reserved &copy;Yahya2024</p>
+        </footer>
+    </div>
+    <script src="script.js">
+
+    </script>
+</body>
+
+</html>
