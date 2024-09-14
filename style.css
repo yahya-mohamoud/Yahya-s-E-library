@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'kumar';
-    src: url('src/fonts/kumaroneoutline-regular-webfont.woff'),
-         url('src/fonts/kumaroneoutline-regular-webfont.woff2') format('woff');
+    src: url('fonts/kumaroneoutline-regular-webfont.woff'),
+         url('fonts/kumaroneoutline-regular-webfont.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -55,6 +55,9 @@ main{
     background-color: #4F6D7F;
 }
 
+/* input #title{
+    text-decoration: underline;
+} */
 
 footer{
     grid-column: 1 / 4;
@@ -151,7 +154,22 @@ input:focus{
     font-weight: 720;
     width: 120px;
     height: 30px;
-    margin: 0 auto;
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+.read{
+    background-color: green;
+    padding: 5px;
+    border: none;
+    border-radius: 6px;
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: 720;
+    width: 120px;
+    height: 30px;
+    margin: 5px auto;
+    cursor: pointer;
 }
 
 .btnOne:hover, .submit:hover, .delete:hover{
@@ -162,11 +180,12 @@ input:focus{
 .book{
     background-color: #e0e1dd;
     width: 350px;
-    height: 200px;
+    height: 220px;
     padding: 20px;
     margin: 20px auto; 
     display: grid;
     grid-column: 1 /2;
     border-radius: 10px;
     box-shadow: 0.25px 0px 10px rgba(0, 0, 0, 0.6);
+    
 }
