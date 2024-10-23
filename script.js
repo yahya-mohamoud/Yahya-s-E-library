@@ -141,10 +141,11 @@ confirmBtn.addEventListener("click", (e) => {
   display();
   e.preventDefault();
   dialog.close();
+  validityCheck()
 });
 
-
-const titleInp = document.querySelector("#title")
+function validityCheck () {
+  const titleInp = document.querySelector("#title")
 const authorInp = document.querySelector("#author")
 const pagesInp = document.querySelector("#pages")
 
@@ -187,3 +188,5 @@ pagesInp.addEventListener("click", (ev) => {
 
 
 })
+}
+
