@@ -145,46 +145,49 @@ confirmBtn.addEventListener("click", (e) => {
 });
 
 function validityCheck () {
+
   const titleInp = document.querySelector("#title")
-const authorInp = document.querySelector("#author")
-const pagesInp = document.querySelector("#pages")
+  const authorInp = document.querySelector("#author")
+  const pagesInp = document.querySelector("#pages")
 
-titleInp.addEventListener("input", (ev) => {
-    let title = ev.target;
-    title.setCustomValidity("")
+  titleInp.addEventListener("input", (ev) => {
+      let titleInp = ev.target;
+      titleInp.setCustomValidity("")
 
-    let currently = title.checkValidity()
+      let currently = title.checkValidity()
 
-    if (titleInp.value < 5) {
-      title.setCustomValidity("Please your title must contain 5 letters")
-      titleInp.reportValidity()
+      if (titleInp.value < 5) {
+        titleInp.setCustomValidity("Please your title must contain 5 letters")
+        titleInp.reportValidity()
+        console.log(titleInp.setCustomValidity(), titleInp.reportValidity());
+        
+      }
+
+  })
+
+  authorInp.addEventListener("input", (ev) => {
+    let authorInp = ev.target;
+    authorInp.setCustomValidity("")
+
+    let currently = authorInp.checkValidity()
+
+    if (authorInp.value < 4) {
+      authorInp.setCustomValidity("Please your author must contain atleast 4 letters")
+      authorInp.reportValidity()
     }
+  })
 
-})
+  pagesInp.addEventListener("click", (ev) => {
+      let pagesInp = ev.target;
 
-authorInp.addEventListener("input", (ev) => {
-  let authorInp = ev.target;
-  authorInp.setCustomValidity("")
+      pagesInp.setCustomValidity("")
 
-  let currently = authorInp.checkValidity()
+      let currently = pagesInp.checkValidity()
 
-  if (authorInp.value < 4) {
-    authorInp.setCustomValidity("Please your author must contain atleast 4 letters")
-    authorInp.reportValidity()
-  }
-})
-
-pagesInp.addEventListener("click", (ev) => {
-    let pagesInp = ev.target;
-
-    pagesInp.setCustomValidity("")
-
-    let currently = pagesInp.checkValidity()
-
-    if (pagesInp.value < 1) {
-      pagesInp.setCustomValidity("please provide valid number")
-      pagesInp.reportValidity()
-    }
+      if (pagesInp.value < 1) {
+        pagesInp.setCustomValidity("please provide valid number")
+        pagesInp.reportValidity()
+      }
 
 
 })
