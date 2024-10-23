@@ -33,12 +33,12 @@ class Book {
     readBtns.forEach((btn) => {
       btn.addEventListener("click", function () {
        if(btn.textContent == "READ"){
-        btn.textContent = "Not Read Yet"
+        btn.textContent = "READ"
         readPlc.textContent = "Read: Not Read Yet"
         btn.style.backgroundColor = "red";
         btn.style.color = "white";
        }else{
-        btn.textContent = "READ"
+        btn.textContent = "Not Read Yet"
         readPlc.textContent = "Read: READ"
         btn.style.backgroundColor = "green";
         btn.style.color = "white";
