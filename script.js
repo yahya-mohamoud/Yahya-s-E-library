@@ -142,3 +142,20 @@ confirmBtn.addEventListener("click", (e) => {
   e.preventDefault();
   dialog.close();
 });
+
+
+const titleInp = document.querySelector("#title")
+const authorInp = document.querySelector("#author")
+const pagesInp = document.querySelector("#pages")
+
+titleInp.addEventListener("input", () => {
+    titleInp.checkValidity()
+})
+
+authorInp.addEventListener("input", () => {
+    authorInp.checkValidity()
+})
+
+pagesInp.addEventListener("click", () => {
+    pagesInp.checkValidity()
+})
