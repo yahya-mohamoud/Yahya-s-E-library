@@ -111,12 +111,11 @@ function display() {
         readBtn.textContent = "Not Read Yet";
         readBtn.style.backgroundColor = "red";
         readBtn.style.color = "white";
-        readPlc.textContent = "Not Read Yet";
+        
       } else {
         readBtn.textContent = "READ";
         readBtn.style.backgroundColor = "green";
         readBtn.style.color = "white";
-        readPlc.textContent = "READ";
       }
     });
     // Add event listener to the "delete" button
@@ -141,55 +140,55 @@ confirmBtn.addEventListener("click", (e) => {
   display();
   e.preventDefault();
   dialog.close();
-  validityCheck()
+  // validityCheck()
 });
 
-function validityCheck () {
+// function validityCheck () {
 
-  const titleInp = document.querySelector("#title")
-  const authorInp = document.querySelector("#author")
-  const pagesInp = document.querySelector("#pages")
+//   const titleInp = document.querySelector("#title")
+//   const authorInp = document.querySelector("#author")
+//   const pagesInp = document.querySelector("#pages")
 
-  titleInp.addEventListener("input", (ev) => {
-      let titleInp = ev.target;
-      titleInp.setCustomValidity("")
+//   titleInp.addEventListener("input", (ev) => {
+//       let titleInp = ev.target;
+//       titleInp.setCustomValidity("")
 
-      let currently = title.checkValidity()
+//       let currently = title.checkValidity()
 
-      if (titleInp.value < 5) {
-        titleInp.setCustomValidity("Please your title must contain 5 letters")
-        titleInp.reportValidity()
-        console.log(titleInp.setCustomValidity(), titleInp.reportValidity());
+//       if (titleInp.value < 5) {
+//         titleInp.setCustomValidity("Please your title must contain 5 letters")
+//         titleInp.reportValidity()
+//         console.log(titleInp.setCustomValidity(), titleInp.reportValidity());
         
-      }
+//       }
 
-  })
+//   })
 
-  authorInp.addEventListener("input", (ev) => {
-    let authorInp = ev.target;
-    authorInp.setCustomValidity("")
+//   authorInp.addEventListener("input", (ev) => {
+//     let authorInp = ev.target;
+//     authorInp.setCustomValidity("")
 
-    let currently = authorInp.checkValidity()
+//     let currently = authorInp.checkValidity()
 
-    if (authorInp.value < 4) {
-      authorInp.setCustomValidity("Please your author must contain atleast 4 letters")
-      authorInp.reportValidity()
-    }
-  })
+//     if (authorInp.value < 4) {
+//       authorInp.setCustomValidity("Please your author must contain atleast 4 letters")
+//       authorInp.reportValidity()
+//     }
+//   })
 
-  pagesInp.addEventListener("click", (ev) => {
-      let pagesInp = ev.target;
+//   pagesInp.addEventListener("click", (ev) => {
+//       let pagesInp = ev.target;
 
-      pagesInp.setCustomValidity("")
+//       pagesInp.setCustomValidity("")
 
-      let currently = pagesInp.checkValidity()
+//       let currently = pagesInp.checkValidity()
 
-      if (pagesInp.value < 1) {
-        pagesInp.setCustomValidity("please provide valid number")
-        pagesInp.reportValidity()
-      }
+//       if (pagesInp.value < 1) {
+//         pagesInp.setCustomValidity("please provide valid number")
+//         pagesInp.reportValidity()
+//       }
 
 
-})
-}
+// })
+// }
 
