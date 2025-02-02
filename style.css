@@ -1,11 +1,11 @@
-@font-face {
+/* @font-face {
     font-family: 'kumar';
     src: url('fonts/kumaroneoutline-regular-webfont.woff'),
          url('fonts/kumaroneoutline-regular-webfont.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
 
-}
+} */
 
 *{
     margin: 0;
@@ -187,5 +187,4 @@ input:focus{
     grid-column: 1 /2;
     border-radius: 10px;
     box-shadow: 0.25px 0px 10px rgba(0, 0, 0, 0.6);
-    
 }
