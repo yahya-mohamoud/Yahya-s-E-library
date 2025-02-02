@@ -67,7 +67,8 @@ showBooks()
 
 function display() {
   bookList.innerText = ''
-  myLibrary.forEach((book) => {
+  myLibrary.forEach((book, index) => {
+    const indexx = index;
     const books = document.createElement('div')
     books.classList.add('book')
 
@@ -90,16 +91,15 @@ function display() {
     const readBtn = document.createElement('button')
     readBtn.classList.add('read')
     if (book.status == "Read") {
-        readBtn.textContent = "Not Read";
-        readBtn.style.background = '#ba0707'
+      readBtn.textContent = "Not Read";
+      readBtn.style.background = '#ba0707'
     } else {
       readBtn.textContent = "Read"
       readBtn.style.background = 'green'
 
     }
-    // readBtn.innerText = ""
 
-   const deleteBtn = document.createElement('button')
+    const deleteBtn = document.createElement('button')
     deleteBtn.classList.add('delete')
     deleteBtn.innerText = 'Delete'
 
@@ -114,13 +114,13 @@ function display() {
 
 const one = new Book("cali", "cali", 23, "Read")
 myLibrary.push(one)
+display()
 
 
 function handleDelete(btn) {
   btn.addEventListener('click', (index) => {
-    myLibrary.splice(index, 0)
-    console.log("woekin");
-    // display()
+    myLibrary.splice(index, 1)
+    display()
   })
 }
 
@@ -130,7 +130,7 @@ function handleStatus(btn, status) {
       btn.textContent = "Not Read"
       status.innerText = `Status: ${" Read"}`
       btn.style.backgroundColor = '#ba0707'
-    } else  {
+    } else {
       btn.textContent = "Read"
       status.innerText = `Status: ${"Not Read"}`
       btn.style.backgroundColor = 'green'
@@ -153,7 +153,3 @@ confirmBtn.addEventListener("click", (e) => {
   display()
   dialog.close();
 });
-
-
-console.log(myLibrary);
-
